@@ -35,7 +35,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">¿Eres nuev@?:
-    <a href="#"> Registrate</a>
+    <a href="" data-toggle="modal" data-target="#centralModalRegistro"> Registrate</a>
   </div>
   <!-- Copyright -->
 </footer>

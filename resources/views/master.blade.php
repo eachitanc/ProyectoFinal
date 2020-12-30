@@ -31,15 +31,87 @@
     </head>
     <body style="background-color:lavender;" class="sb-nav-fixed">
         @include('encabezado')
-        <br>
         <div>
             @yield('content')
         </div>
         @include('pie')
+        <div class="modal fade" id="centralModalRegistro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading lead">Formulario de Registro</p>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+                    <!-- Default form register -->
+                    <form class="text-center border border-light p-5" action="#!">
+                        <div class="form-row mb-4">
+                            <div class="col">
+                                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col">
+                                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <input type="email" id="formRegCorreo" class="form-control mb-4" placeholder="Correo electrónico" required>
+                        <input type="text" id="formRegUser" class="form-control mb-4" placeholder="Usuario" required>
+                        <input type="password" id="formRegPass" class="form-control mb-4" placeholder="Contraseña" required>
+
+                        <!-- Sign up button -->
+                        <a type="button" class="btn btn-primary">Registrar <i class="far fa-user ml-1 text-white"></i></a>
+                    </form>
+                    <!-- Default form register -->
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!-- Central Modal Medium Info-->
+        <div class="modal fade" id="centralModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading lead">Iniciar Sesión</p>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+                    <form action="">
+                        <!--Body-->
+                        <div class="modal-body">
+                            <div class="text-center">
+                                <!-- Email -->
+                                <input type="text" id="defaultLoginFormUser" class="form-control mb-4" placeholder="Usuario">
+
+                                <!-- Password -->
+                                <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Contraseña">
+
+                                <!-- Sign in button -->
+                                
+                            </div>
+                        </div>
+
+                        <!--Footer-->
+                        <div class="modal-footer justify-content-center">
+                            <a type="button" class="btn btn-primary">Login <i class="far fa-user ml-1 text-white"></i></a>
+                        </div>
+                    </form>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!-- Central Modal Medium Info-->
+
         <!-- jQuery -->
         <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/jquery.min.js') }}"></script>
-        <!-- Bootstrap tooltips 
-        <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/popper.min.js') }}"></script> -->
         <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/bootstrap.min.js') }}"></script>
         <!-- MDB core JavaScript -->

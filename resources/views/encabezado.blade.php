@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio
+                <a class="nav-link" href="{{ url('/') }}">Inicio
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
@@ -38,7 +38,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="#">Iniciar Sesión</a>
+                    <a class="dropdown-item" href=""  data-toggle="modal" data-target="#centralModalLogin" >Iniciar Sesión</a>
                     <a class="dropdown-item" href="#">Actializar Perfíl</a>
                     <a class="dropdown-item" href="#">Cerrar Sesión</a>
                 </div>

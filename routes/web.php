@@ -15,3 +15,4 @@ use App\Http\Controllers\InicioController;
 */
 
 Route::get('/', [InicioController::class, 'getIndex']);
+Route::get('/login', [InicioController::class, 'login']);
