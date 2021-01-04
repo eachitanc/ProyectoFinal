@@ -14,6 +14,22 @@ class RolSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $roles = [
+            [
+                'descripcion_rol'=> 'Administrador',
+            ],
+    
+            [
+                'descripcion_rol'=> 'Vendedor',
+            ],
+
+            [
+                'descripcion_rol'=> 'Cliente',
+            ],
+            
+            
+        ];
+        DB::table('rol')->insert($roles);
+        
     }
 }
