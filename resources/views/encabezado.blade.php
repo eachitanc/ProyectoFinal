@@ -39,7 +39,7 @@
                 <div class="dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenuLink-333">
                     <a class="dropdown-item" href=""  data-toggle="modal" data-target="#centralModalLogin" >Iniciar Sesión</a>
-                    <a class="dropdown-item" href="#">Actializar Perfíl</a>
+                    <a class="dropdown-item" href="#">Actualizar Perfíl</a>
                     <a class="dropdown-item" href="#">Cerrar Sesión</a>
                 </div>
             </li>
