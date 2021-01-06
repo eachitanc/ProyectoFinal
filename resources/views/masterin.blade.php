@@ -30,9 +30,9 @@
         </style>
     </head>
     <body style="background-color:lavender;" class="sb-nav-fixed">
-        @include('encabezado')
+        @include('encabezadoin')
         <div>
-            @yield('content')
+            @yield('contenido')
         </div>
         @include('pie')
         <!-- jQuery -->

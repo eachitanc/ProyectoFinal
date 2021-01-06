@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,7 @@ use App\Http\Controllers\InicioController;
 */
 
 Route::get('/', [InicioController::class, 'getIndex']);
-Route::get('/login', [InicioController::class, 'login']);
+Route::get('/login', [InicioController::class, 'login'])->name('formLogin');
+Route::post('/loggin', [LoginController::class, 'loginUser'])->name('loginUsuario');
+Route::get('/registro', [InicioController::class, 'registro'])->name('formRegistro');
+Route::post('/registros', [LoginController::class, 'registroUser'])->name('registroUsuario');

@@ -12,4 +12,7 @@ class InicioController extends Controller
     public function login(){
         return view('login.login');
     }
+    public function registro(){
+        return view('login.registro');
+    }
 }
