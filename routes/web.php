@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,7 @@ Route::get('/login', [InicioController::class, 'login'])->name('formLogin');
 Route::post('/loggin', [LoginController::class, 'loginUser'])->name('loginUsuario');
 Route::get('/registro', [InicioController::class, 'registro'])->name('formRegistro');
 Route::post('/registros', [LoginController::class, 'registroUser'])->name('registroUsuario');
+Route::get('/productos/anchetas', [ProductosController::class, 'anchetas']);
+Route::post('/productos/buscar',[ProductosController::class, 'buscarProd'])->name('busprod');
+
+Route::post('/productos/search', [ProductosController::class, 'buscaProducto'])->name('searchProduct');
