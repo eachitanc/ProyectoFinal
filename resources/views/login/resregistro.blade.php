@@ -24,6 +24,23 @@
                     <input type="text" id="txtUser" name="txtUser"class="form-control mb-4" placeholder="Usuario" required>
                     <input type="password" id="passUser" name="passUser" class="form-control mb-4" placeholder="Contraseña" required>
                     <!-- Sign up button -->
+                    <div style="color:red;">
+                        <div hidden>
+                            {{$resp = Session::get('resp')}}  
+                        </div>  
+                        @if($resp == 0)
+                            Usuario ya registrado
+                        @endif
+                        @if($resp == 1)
+                            Correo ya se encuentra en uso
+                        @endif
+                        @if($resp == 2)
+                            <div style="color: green;">
+                                ¡Registro Exitoso!
+                            </div>
+                            <a type="button" class="btn btn-default btn-sm" href="{{ route('formLogin') }}">Iniciar Sesión</a>
+                        @endif
+                    </div>
                     <button type="submit" class="btn btn-primary">Registrar <i class="far fa-user ml-1 text-white"></i></button>
                 </form>
                 <!-- Default form register -->
