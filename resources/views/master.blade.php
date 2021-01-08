@@ -34,6 +34,7 @@
         <div>
             @yield('content')
         </div>
+        <br>
         @include('pie')
         <!-- jQuery -->
         <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/jquery.min.js') }}"></script>

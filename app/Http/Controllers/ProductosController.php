@@ -47,4 +47,12 @@ class ProductosController extends Controller
         }
         return view('productos.buscar',['producto' => $prod]);
     }
+    public function detalle($id){
+        $detalle = DB::table('productos')
+                ->join('categoria','categoria','=','categoria.id_cat')
+                ->where('id_producto','=',"$id")
+                ->get();
+        return view('productos.detalles',['detal' => $detalle]);
+     }
 }
+

@@ -21,7 +21,7 @@ Route::get('/login', [InicioController::class, 'login'])->name('formLogin');
 Route::post('/loggin', [LoginController::class, 'loginUser'])->name('loginUsuario');
 Route::get('/registro', [InicioController::class, 'registro'])->name('formRegistro');
 Route::post('/registros', [LoginController::class, 'registroUser'])->name('registroUsuario');
-Route::get('/productos/anchetas', [ProductosController::class, 'anchetas']);
+Route::get('/productos/anchetas', [ProductosController::class, 'anchetas'])->name('anchetas');
 Route::post('/productos/buscar',[ProductosController::class, 'buscarProd'])->name('busprod');
-
+Route::get('/productos/detalles/{id}', [ProductosController::class, 'detalle'] )->name('detallesProd');
 Route::post('/productos/search', [ProductosController::class, 'buscaProducto'])->name('searchProduct');
