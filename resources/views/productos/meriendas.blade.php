@@ -3,7 +3,7 @@
     <div class="container"> 
         <div class="row" id="divBuscar">
             <div class="col-sm-8 align-middle">
-                <h3>ANCHETAS</h3>
+                <h3>MERIENDAS SORPRESA</h3>
             </div>
             <div class="col">
                 <form action="{{ route('searchProduct')}}" method="POST"> 
@@ -21,19 +21,19 @@
             </div>
         </div>   
         <div class="row">
-            @foreach($ancheta as $anc)
+            @foreach($meriendas as $mr)
                 <div class="col-md-3">
                     <br>
                     <div class="card" style="width: 15rem; height: 25rem;">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src='{{url("/img/$anc->foto_producto")}}' class="img-fluid" id="img"/>
+                            <img src='{{url("/img/$mr->foto_producto")}}' class="img-fluid" id="img"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                             </a>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{$anc->nom_producto}}</h5>
-                            <p>$ {{$anc->valor_producto}}</p>
+                            <h5 class="card-title">{{$mr->nom_producto}}</h5>
+                            <p>$ {{$mr->valor_producto}}</p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div title="Agregar">
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div title="Detalles">
-                                        <a  href="{{route('detallesProd', $anc->id_producto)}}"class="btn btn-primary btn-sm" value="Detalles">
+                                        <a  href="{{route('detallesProd', $mr->id_producto)}}"class="btn btn-primary btn-sm" value="Detalles">
                                             <i class="fas fa-list"></i>
                                         </a>
                                     </div> 

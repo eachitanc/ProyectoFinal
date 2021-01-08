@@ -17,6 +17,42 @@ class ProductosController extends Controller
                     ->get();
         return view('productos.anchetas',['ancheta' => $anchetas]);
     }
+    public function chocolates(){
+        $chocolates = DB::table('productos as pro')
+                    ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
+                    ->where('categoria', '=', '2')
+                    ->orderBy('valor_producto', 'desc')
+                    ->get();
+        return view('productos.chocolates',['chocolate' => $chocolates]);
+    }
+    public function desayunos(){
+        $desayunos = DB::table('productos as pro')
+                    ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
+                    ->where('categoria', '=', '3')
+                    ->orderBy('valor_producto', 'desc')
+                    ->get();
+        return view('productos.desayunos',['desayuno' => $desayunos]);
+    }
+    public function flores(){
+        $flores = DB::table('productos as pro')
+                    ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
+                    ->where('categoria', '=', '4')
+                    ->orderBy('valor_producto', 'desc')
+                    ->get();
+        return view('productos.flores',['flores' => $flores]);
+    }
+    public function meriendas(){
+        $merienda = DB::table('productos as pro')
+                    ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
+                    ->where('categoria', '=', '5')
+                    ->orderBy('valor_producto', 'desc')
+                    ->get();
+        return view('productos.meriendas',['meriendas' => $merienda]);
+    }
 
     //buscar
     /*public function buscarProd(Request $request){

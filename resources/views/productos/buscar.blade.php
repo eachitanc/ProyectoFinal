@@ -29,23 +29,37 @@
             </div>
         @endif
         @foreach($producto as $pro)
-            <div class="col-md-3">
-                <div class="card" style="width: 15rem;">
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src='{{url("/img/$pro->foto_producto")}}' class="img-fluid"/>
-                        <a href="#!">
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{$pro->nom_producto}}</h5>
-                        <!--<p class="card-text">{{$pro->descripcion_producto}}</p>-->
-                        <h3>$ {{$pro->valor_producto}}</h3>
-                        
-                        <a href="#!" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></a>
+        <div class="col-md-3">
+                    <br>
+                    <div class="card" style="width: 15rem; height: 25rem;">
+                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                            <img src='{{url("/img/$pro->foto_producto")}}' class="img-fluid" id="img"/>
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{$pro->nom_producto}}</h5>
+                            <p>$ {{$pro->valor_producto}}</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div title="Agregar">
+                                        <a href="#!" class="btn btn-success btn-sm" >
+                                            <i class="fas fa-shopping-cart" ></i>
+                                        </a>
+                                    </div> 
+                                </div>
+                                <div class="col-md-6">
+                                    <div title="Detalles">
+                                        <a  href="{{route('detallesProd', $pro->id_producto)}}"class="btn btn-primary btn-sm" value="Detalles">
+                                            <i class="fas fa-list"></i>
+                                        </a>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         @endforeach
     </div>
 </div>

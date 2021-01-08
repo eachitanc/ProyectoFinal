@@ -21,10 +21,10 @@
                 </a>
                 <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
                     <a class="dropdown-item" href="{{url('/productos/anchetas')}}">Anchetas</a>
-                    <a class="dropdown-item" href="#">Chocolates</a>
-                    <a class="dropdown-item" href="#">Desayunos Sorpresa</a>
-                    <a class="dropdown-item" href="#">Flores</a>
-                    <a class="dropdown-item" href="#">Meriendas Sorpresa</a>
+                    <a class="dropdown-item" href="{{url('/productos/chocolates')}}">Chocolates</a>
+                    <a class="dropdown-item" href="{{url('/productos/desayunos')}}">Desayunos Sorpresa</a>
+                    <a class="dropdown-item" href="{{url('/productos/flores')}}">Flores</a>
+                    <a class="dropdown-item" href="{{url('/productos/meriendas')}}">Meriendas Sorpresa</a>
                     <a class="dropdown-item" href="#">Regalos</a>
                 </div>
             </li>

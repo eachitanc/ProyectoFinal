@@ -21,19 +21,19 @@
             </div>
         </div>   
         <div class="row">
-            @foreach($ancheta as $anc)
+            @foreach($flores as $fl)
                 <div class="col-md-3">
                     <br>
                     <div class="card" style="width: 15rem; height: 25rem;">
                         <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src='{{url("/img/$anc->foto_producto")}}' class="img-fluid" id="img"/>
+                            <img src='{{url("/img/$fl->foto_producto")}}' class="img-fluid" id="img"/>
                             <a href="#!">
                                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
                             </a>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{$anc->nom_producto}}</h5>
-                            <p>$ {{$anc->valor_producto}}</p>
+                            <h5 class="card-title">{{$fl->nom_producto}}</h5>
+                            <p>$ {{$fl->valor_producto}}</p>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div title="Agregar">
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div title="Detalles">
-                                        <a  href="{{route('detallesProd', $anc->id_producto)}}"class="btn btn-primary btn-sm" value="Detalles">
+                                        <a  href="{{route('detallesProd', $fl->id_producto)}}"class="btn btn-primary btn-sm" value="Detalles">
                                             <i class="fas fa-list"></i>
                                         </a>
                                     </div> 

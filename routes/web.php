@@ -22,6 +22,10 @@ Route::post('/loggin', [LoginController::class, 'loginUser'])->name('loginUsuari
 Route::get('/registro', [InicioController::class, 'registro'])->name('formRegistro');
 Route::post('/registros', [LoginController::class, 'registroUser'])->name('registroUsuario');
 Route::get('/productos/anchetas', [ProductosController::class, 'anchetas'])->name('anchetas');
+Route::get('/productos/desayunos', [ProductosController::class, 'desayunos'])->name('desayunos');
+Route::get('/productos/chocolates', [ProductosController::class, 'chocolates'])->name('chocolates');
+Route::get('/productos/flores', [ProductosController::class, 'flores'])->name('flores');
+Route::get('/productos/meriendas', [ProductosController::class, 'meriendas'])->name('meriendas');
 Route::post('/productos/buscar',[ProductosController::class, 'buscarProd'])->name('busprod');
 Route::get('/productos/detalles/{id}', [ProductosController::class, 'detalle'] )->name('detallesProd');
 Route::post('/productos/search', [ProductosController::class, 'buscaProducto'])->name('searchProduct');
