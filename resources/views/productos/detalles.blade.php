@@ -39,9 +39,32 @@
                         </div>
                         <div class="col-md-6">
                         <div title="Regresar">
-                            <a  href="{{route('anchetas')}}" class="btn btn-primary btn-sm">
-                                <i class="fas fa-undo"></i>
-                            </a>
+                            @if($det->descripcion_cat == "Anchetas")
+                                <a  href="{{route('anchetas')}}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-undo"></i>
+                                </a>
+                            @endif 
+                            @if($det->descripcion_cat == "Chocolates")
+                                <a  href="{{route('chocolates')}}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-undo"></i>
+                                </a>
+                            @endif
+                            @if($det->descripcion_cat == "Desayunos Sorpresa")
+                                <a  href="{{route('desayunos')}}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-undo"></i>
+                                </a>
+                            @endif
+                            @if($det->descripcion_cat == "Flores")
+                                <a  href="{{route('flores')}}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-undo"></i>
+                                </a>
+                            @endif
+                            @if($det->descripcion_cat == "Meriendas Sorpresa")
+                                <a  href="{{route('meriendas')}}" class="btn btn-primary btn-sm">
+                                    <i class="fas fa-undo"></i>
+                                </a>
+                            @endif
+                            
                         </div> 
                         </div>
                     </div>

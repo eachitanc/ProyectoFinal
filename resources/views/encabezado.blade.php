@@ -25,7 +25,7 @@
                     <a class="dropdown-item" href="{{url('/productos/desayunos')}}">Desayunos Sorpresa</a>
                     <a class="dropdown-item" href="{{url('/productos/flores')}}">Flores</a>
                     <a class="dropdown-item" href="{{url('/productos/meriendas')}}">Meriendas Sorpresa</a>
-                    <a class="dropdown-item" href="#">Regalos</a>
+                    <!--<a class="dropdown-item" href="#">Regalos</a>-->
                 </div>
             </li>
         </ul>

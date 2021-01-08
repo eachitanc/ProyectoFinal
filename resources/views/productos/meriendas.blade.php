@@ -2,7 +2,7 @@
 @section('content')
     <div class="container"> 
         <div class="row" id="divBuscar">
-            <div class="col-sm-8 align-middle">
+            <div class="col-sm-8 align-middle" id="prod">
                 <h3>MERIENDAS SORPRESA</h3>
             </div>
             <div class="col">
