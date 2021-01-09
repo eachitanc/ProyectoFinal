@@ -17,6 +17,7 @@ use App\Http\Controllers\ProductosController;
 */
 
 Route::get('/', [InicioController::class, 'getIndex']);
+Route::get('/logeado', [InicioController::class, 'getIndexlog']);
 Route::get('/login', [InicioController::class, 'login'])->name('formLogin');
 Route::post('/loggin', [LoginController::class, 'loginUser'])->name('loginUsuario');
 Route::get('/registro', [InicioController::class, 'registro'])->name('formRegistro');

@@ -1,5 +1,5 @@
 <!--Navbar -->
-<nav id="barraPrincipal" class="mb-1 navbar navbar-expand-lg navbar-dark">
+<nav id="barraPrincipal" class="mb-0 navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">LA UNICA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
         aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/') }}">Inicio
+                <a class="nav-link" href="{{ url('/logeado') }}">Inicio
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
@@ -37,7 +37,8 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="{{ route('formLogin')}}">Iniciar Sesión</a>
+                    <a class="dropdown-item" href="#">Actualizar Perfíl</a>
+                    <a class="dropdown-item" href="{{ url('/') }}">Cerrar Sesión</a>
                 </div>
             </li>
         </ul>

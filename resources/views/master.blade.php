@@ -33,18 +33,19 @@
             }
         </style>
     </head>
-    <body style="background-color:lavender;" class="sb-nav-fixed">
+    <body style="background-color:lavender;">
         @include('encabezado')
         <div>
             @yield('content')
         </div>
-        <br>
         @include('pie')
         <!-- jQuery -->
         <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/jquery.js') }}"></script>
         <!-- Bootstrap core JavaScript -->
         <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/bootstrap.min.js') }}"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/mdb.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url('/assets/mdbootstrap/js/mystyle.js') }}"></script>
     </body>
 </html>

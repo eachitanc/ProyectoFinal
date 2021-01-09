@@ -1,1 +1,2 @@
-$('.carousel-3d-basic').mdbCarousel3d();
+$( document ).ready(function() { 
+});

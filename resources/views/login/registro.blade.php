@@ -1,5 +1,5 @@
-@extends('master')
-    @section('content')
+@extends('masterout')
+    @section('contenido')
     <div>
         <div class="modal-dialog modal-notify modal-info" role="document">
             <!--Content-->

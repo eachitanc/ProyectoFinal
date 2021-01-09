@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 class InicioController extends Controller
 {
     public function getIndex(){
-        return view('master');
+        return view('inicio');
+    }
+    public function getIndexlog(){
+        return view('logeado.inicio');
     }
     public function login(){
         return view('login.login');

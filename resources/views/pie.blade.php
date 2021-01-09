@@ -1,42 +1,42 @@
 <!-- Footer -->
-<footer id="pie" class="page-footer font-small footer-light darken-3">
+    <footer id="pie" class="page-footer font-small footer-light darken-3">
 
-  <!-- Footer Elements -->
-  <div class="container">
+    <!-- Footer Elements -->
+    <div class="container">
 
-    <!-- Grid row-->
-    <div class="row">
+        <!-- Grid row-->
+        <div class="row">
 
-      <!-- Grid column -->
-      <div class="col-md-12 py-2">
-        <div class="mb-5 flex-center">
+        <!-- Grid column -->
+        <div class="col-md-12 py-2">
+            <div class="mb-5 flex-center">
 
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
+            <!-- Facebook -->
+            <a class="fb-ic">
+                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            </div>
         </div>
-      </div>
-      <!-- Grid column -->
+        <!-- Grid column -->
+
+        </div>
+        <!-- Grid row-->
 
     </div>
-    <!-- Grid row-->
+    <!-- Footer Elements -->
 
-  </div>
-  <!-- Footer Elements -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">¿Eres nuev@?:
-    <a href="{{ route('formRegistro')}}" > Registrate</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">¿Eres nuev@?:
+        <a href="{{ route('formRegistro')}}" > Registrate</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
 <!-- Footer -->
