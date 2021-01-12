@@ -16,6 +16,6 @@ class InicioController extends Controller
         return view('login.login');
     }
     public function registro(){
-        return view('login.registro');
+        return view('registro.registro');
     }
 }

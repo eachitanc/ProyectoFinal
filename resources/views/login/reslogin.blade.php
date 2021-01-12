@@ -20,9 +20,19 @@
 
                             <!-- Sign in button -->
                             
+                            <div style="color:red;">
+                                <div hidden>
+                                    {{$resp = Session::get('resp')}}  
+                                </div> 
+                                @if($resp == 0)
+                                    Contraseña incorecta
+                                @endif
+                                @if($resp == 1)
+                                    Usuario no registrado
+                                @endif
+                            </div>
                         </div>
                     </div>
-
                     <!--Footer-->
                     <div class="modal-footer justify-content-center">
                         <button type="submit" class="btn btn-primary">Login <i class="far fa-user ml-1 text-white"></i></button>

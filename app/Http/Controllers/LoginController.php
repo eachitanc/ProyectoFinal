@@ -9,7 +9,7 @@ use Illuminate\Session\SessionManager;
 
 class LoginController extends Controller
 {
-    public function loginUser(Request $request){
+    public function loginUser(Request $request, SessionManager $sessionManager){
         $us = $request->input('defaultLoginFormUser');
         $ps = $request->input('defaultLoginFormPassword');
         if($us == "" || $ps == ""){
@@ -18,7 +18,23 @@ class LoginController extends Controller
             $user  = DB::table('usuario')
                     ->where('user','=',"$us")
                     ->get();
-            return view('logeado.inicio', ['user' => $user]);
+            if(count($user)>0){
+                $validar  = DB::table('usuario')
+                    ->where('user','=',"$us")
+                    ->where('pass_user','=',"$ps")
+                    ->get();
+                if(count($validar)>0){
+                    return view('logeado.inicio', ['user' => $user]);
+                }
+                else{
+                    $resp = "0";
+                }   
+            }
+            else{
+                $resp = "1";
+            }
+            $sessionManager->flash('resp', "$resp");
+            return view('login.reslogin');     
         }
         
     }
@@ -50,7 +66,7 @@ class LoginController extends Controller
             }
         }
         $sessionManager->flash('resp', "$resp");
-        return view('login.resregistro');     
+        return view('registro.resregistro');     
     }
 
 }
