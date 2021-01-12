@@ -7,15 +7,11 @@ use Illuminate\Http\Request;
 class InicioController extends Controller
 {
     public function getIndex(){
+        session(['id_usuario' => '0']);
         return view('inicio');
     }
-    public function getIndexlog(){
+    public function getIndexUser(){
         return view('logeado.inicio');
     }
-    public function login(){
-        return view('login.login');
-    }
-    public function registro(){
-        return view('registro.registro');
-    }
+
 }

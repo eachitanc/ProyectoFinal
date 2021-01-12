@@ -1,5 +1,6 @@
 @extends('masterout')
     @section('contenido')
+    {{session(['id_usuario' => '0'])}}
     <div>
         <div class="modal-dialog modal-notify modal-info" role="document">
             <!--Content-->

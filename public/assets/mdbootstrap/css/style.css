@@ -29,3 +29,15 @@
 img.minh-100{
     height: 70vh;
 }
+
+#imgExito{
+    padding-top: 20px;
+    height: 300px;
+    width: 320px;
+}
+
+#divExito{
+    color: rgb(9, 230, 9);
+    font-size: 30px;
+    padding-top: 20px;
+}

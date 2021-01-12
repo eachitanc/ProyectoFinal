@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ url('/logeado') }}">Inicio
+                <a class="nav-link" href="{{ url('/usuario/inicio') }}">Inicio
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
@@ -37,7 +37,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-default"
                 aria-labelledby="navbarDropdownMenuLink-333">
-                    <a class="dropdown-item" href="#">Actualizar Perfíl</a>
+                    <a class="dropdown-item" href="{{ route('formActualizaUsuario') }}">Actualizar Perfíl</a>
                     <a class="dropdown-item" href="{{ url('/') }}">Cerrar Sesión</a>
                 </div>
             </li>
