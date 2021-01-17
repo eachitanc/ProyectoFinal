@@ -17,6 +17,18 @@ class ProductosController extends Controller
                     ->get();
         return view('productos.anchetas',['ancheta' => $anchetas]);
     }
+
+    public function varios(){
+        $varProd = DB::table('productos as pro')
+                    ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
+                    ->whereBetween('valor_producto', [25000, 50000])
+                    ->orderBy('valor_producto', 'desc')
+                    ->get();
+        return view('productos.variosproductos',['varProd' => $varProd]);
+    }
+    
+
     public function chocolates(){
         $chocolates = DB::table('productos as pro')
                     ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')

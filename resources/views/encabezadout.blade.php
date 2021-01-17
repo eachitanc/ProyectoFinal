@@ -13,7 +13,7 @@
                 </a>
             </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Productos</a>
+            <a class="nav-link" href="{{route('variosprod')}}">Productos</a>
         </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
