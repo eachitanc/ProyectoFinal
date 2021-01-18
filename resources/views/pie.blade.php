@@ -5,6 +5,13 @@
     <div class="container">
 
         <!-- Grid row-->
+        <div align="center">
+            Direccion: Cra 6# 11-22 Ipiales-Nariño
+            <br>
+            Teléfono: 55555555
+            <br>
+            Correo: LaUnicastore@gmail.com
+        </div>
         <div class="row">
 
         <!-- Grid column -->
