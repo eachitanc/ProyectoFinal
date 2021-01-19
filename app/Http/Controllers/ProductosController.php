@@ -101,6 +101,22 @@ class ProductosController extends Controller
                 ->where('id_producto','=',"$id")
                 ->get();
         return view('productos.detalles',['detal' => $detalle]);
-     }
+    }
+    public function detalleof($id){
+        $detalle = DB::table('productos')
+                ->join('categoria','categoria','=','categoria.id_cat')
+                ->where('id_producto','=',"$id")
+                ->get();
+        return view('productos.detallesOfertas',['detal' => $detalle]);
+    }
+    public function ofertaProd(){
+        $sale = DB::table('productos as pro')
+                    ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
+                    ->where('valor_producto', '>', '70000')
+                    ->orderBy('valor_producto', 'desc')
+                    ->get();
+        return view('productos.ofertas',['oferta' => $sale]);
+    }
 }
 

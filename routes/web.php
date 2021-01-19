@@ -31,7 +31,9 @@ Route::get('/productos/chocolates', [ProductosController::class, 'chocolates'])-
 Route::get('/productos/flores', [ProductosController::class, 'flores'])->name('flores');
 Route::get('/productos/meriendas', [ProductosController::class, 'meriendas'])->name('meriendas');
 Route::post('/productos/buscar',[ProductosController::class, 'buscarProd'])->name('busprod');
+Route::get('/productos/ofertas', [ProductosController::class, 'ofertaProd'])->name('ofertas');
 Route::get('/productos/detalles/{id}', [ProductosController::class, 'detalle'] )->name('detallesProd');
+Route::get('/productos/detallesOfertas/{id}', [ProductosController::class, 'detalleof'] )->name('detallesOferta');
 Route::post('/productos/search', [ProductosController::class, 'buscaProducto'])->name('searchProduct');
 Route::get('/actualizar/usuario', [ActualizarController::class, 'formActualizaUser'])->name('formActualizaUsuario');
 Route::post('/actualizar/usuarios', [ActualizarController::class, 'resFormActualizaUser'])->name('resFormActualizaUsuario');

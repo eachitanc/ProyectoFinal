@@ -13,7 +13,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
+                <a class="nav-link" href="{{url('/productos/ofertas')}}">Ofertas</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"

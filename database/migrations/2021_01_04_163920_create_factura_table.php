@@ -18,7 +18,6 @@ class CreateFacturaTable extends Migration
             $table->date('fecha_factura');
             $table->Integer('cantidad');
             $table->double('total');
-            $table->double('descuento');
             $table->integer('usuario_id')->unsigned();
             $table->integer('producto_id')->unsigned();
             $table->integer('formapago_id')->unsigned();
