@@ -19,7 +19,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{$ofe->nom_producto}}</h5>
-                            <p style="color:gray;">Antes: $ {{$ofe->valor_producto}}</p>
+                            <p style="color:gray;text-decoration: line-through;" > Antes: $ {{$ofe->valor_producto}}</p>
                             Ahora: ${{$ofe->valor_producto - $ofe->valor_producto * 0.1 }} 
                             <div class="row">
                                 <div class="col-md-6">
