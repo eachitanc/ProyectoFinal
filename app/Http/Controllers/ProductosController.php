@@ -113,7 +113,7 @@ class ProductosController extends Controller
         $sale = DB::table('productos as pro')
                     ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
                     ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
-                    ->where('valor_producto', '>', '70000')
+                    ->where('descuento', '=', '1')
                     ->orderBy('valor_producto', 'desc')
                     ->get();
         return view('productos.ofertas',['oferta' => $sale]);
