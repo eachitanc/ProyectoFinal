@@ -19,8 +19,8 @@ class CreateProductosTable extends Migration
             $table->double('valor_producto',8,2);
             $table->text('descripcion_producto');
             $table->integer('cant_producto');
-            $table->string('foto_producto',10);
-            $table->double('descuento');
+            $table->string('foto_producto',100);
+            $table->boolean('descuento',)->nullable($value = true);
             $table->Integer('categoria')->unsigned();
             $table->foreign('categoria')  //Creación de la llave foranea
                   ->references('id_cat')

@@ -19,7 +19,7 @@ class CreateUsuarioTable extends Migration
             $table->string('pass_user',255);
             $table->string('nom_user',50);
             $table->string('ape_user',50);
-            $table->string('tel_user',10);
+            $table->string('tel_user',10)->nullable($value = true);
             $table->string('correo_user',100);
             $table->integer('rol')->unsigned();
             $table->foreign('rol')  //Creación de la llave foranea
