@@ -3,7 +3,7 @@
     <div class="container"> 
         <div class="row" id="divBuscar">
             <div class="col-sm-8 align-middle" id="prod">
-                <h3>ANCHETAS</h3>
+                <h3>FLORES</h3>
             </div>
             <div class="col">
                 <form action="{{ route('searchProduct')}}" method="POST"> 

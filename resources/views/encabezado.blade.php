@@ -13,7 +13,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/productos/ofertas')}}">Ofertas</a>
+                <a class="nav-link" href="{{route('ofertas')}}">Ofertas</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
@@ -27,6 +27,9 @@
                     <a class="dropdown-item" href="{{url('/productos/meriendas')}}">Meriendas Sorpresa</a>
                     <!--<a class="dropdown-item" href="#">Regalos</a>-->
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('ofertas')}}">Gestion de usuarios</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">

@@ -3,7 +3,7 @@
     <div class="container"> 
         <div class="row" id="divBuscar">
             <div class="col-sm-8 align-middle" id="prod">
-                <h3>OFERTAS</h3>
+                <h3>OFERTAS DEL DIA</h3>
             </div>
         </div>   
         <div class="row">
