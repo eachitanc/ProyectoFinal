@@ -30,7 +30,9 @@ class LoginController extends Controller
                 
                 if(count($validar)>0){
                     $idUs = DB::table('usuario')->whereuser($us)->first()->id_user;
+                    $rolUs = DB::table('usuario')->whereuser($us)->first()->rol;
                     session(['id_usuario' => "$idUs"]);
+                    session(['rol_user' => "$rolUs"]);
                     return view('logeado.inicio', ['user' => $user]);
                 }
                 else{

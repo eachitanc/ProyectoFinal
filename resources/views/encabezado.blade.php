@@ -28,8 +28,23 @@
                     <!--<a class="dropdown-item" href="#">Regalos</a>-->
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('ofertas')}}">Gestion de usuarios</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-334" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" <?php 
+                    if(session('rol_user')==3){
+                        echo 'hidden';
+                    }
+                ?>>Gestion
+                </a>
+                <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-334">
+                    <a class="dropdown-item" href="#" 
+                    <?php 
+                        if(session('rol_user')==2){
+                            echo 'hidden';
+                        }
+                    ?>>Usuarios</a>
+                    <a class="dropdown-item" href="#">Productos</a>
+                </div>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
