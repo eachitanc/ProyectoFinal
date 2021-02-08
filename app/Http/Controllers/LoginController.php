@@ -33,6 +33,7 @@ class LoginController extends Controller
                     $rolUs = DB::table('usuario')->whereuser($us)->first()->rol;
                     session(['id_usuario' => "$idUs"]);
                     session(['rol_user' => "$rolUs"]);
+                    session(['factura' => "0"]);
                     return view('logeado.inicio', ['user' => $user]);
                 }
                 else{

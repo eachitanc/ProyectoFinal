@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Factura;
+use App\Models\DetalleFactura;
 
 class ProductosController extends Controller
 {
@@ -117,6 +119,47 @@ class ProductosController extends Controller
                     ->orderBy('valor_producto', 'desc')
                     ->get();
         return view('productos.ofertas',['oferta' => $sale]);
+    }
+
+    public function facturarProd(){
+        $idfact = session('id_fact');
+        $datos = DB::table('factura')
+                    ->join('detallefactura', 'id_factura', '=', 'factura_id')
+                    ->join('productos', 'id_producto', '=', 'producto_id')
+                    ->join('usuario', 'usuario_id', '=', 'id_user')
+                    ->select('id_producto','id_factura','nom_user','ape_user','dir_user','tel_user','correo_user','nom_producto','valor_producto','descuento','cant_producto as cantidad')
+                    ->where('id_factura', '=', "$idfact")
+                    ->get();
+        return view('productos.factura.facturar',['datfact' => $datos]);
+    }
+
+    public function agregarAlCarrito($id){
+        if(session('factura')== 0){
+            $hoy = date('Y-m-d');
+            $iduser = session('id_usuario');
+            $factura = new Factura();
+            $factura->fecha_factura = "$hoy";
+            $factura->usuario_id = "$iduser";
+            $factura->formapago_id = "1";
+            $factura->save();
+
+            $idFact = DB::table('factura')->orderby('id_factura','desc')->first()->id_factura;
+            session(['id_fact' => "$idFact"]);
+            session(['factura' => "1"]);
+
+            $det_factura = new DetalleFactura();
+            $det_factura->factura_id = "$idFact";
+            $det_factura->producto_id = "$id";
+            $det_factura->save();
+        }
+        else{
+            $idfact = session('id_fact');
+            $det_factura = new DetalleFactura();
+            $det_factura->factura_id = "$idfact";
+            $det_factura->producto_id = "$id";
+            $det_factura->save();
+        }
+        return view('productos.comprar');
     }
 }
 

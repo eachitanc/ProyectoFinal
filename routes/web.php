@@ -37,3 +37,5 @@ Route::get('/productos/detallesOfertas/{id}', [ProductosController::class, 'deta
 Route::post('/productos/search', [ProductosController::class, 'buscaProducto'])->name('searchProduct');
 Route::get('/actualizar/usuario', [ActualizarController::class, 'formActualizaUser'])->name('formActualizaUsuario');
 Route::post('/actualizar/usuarios', [ActualizarController::class, 'resFormActualizaUser'])->name('resFormActualizaUsuario');
+Route::get('/productos/comprar/{id}', [ProductosController::class, 'agregarAlCarrito'] )->name('comprarProd');
+Route::get('/productos/compra/factura', [ProductosController::class, 'facturarProd'] )->name('facturar');
