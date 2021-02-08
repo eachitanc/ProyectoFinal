@@ -9,4 +9,8 @@ class Factura extends Model
 {
     protected $table = 'factura';
     protected $primaryKey = 'id_factura';
+
+    public function detfactura(){
+        return $this->belongsTo(DetalleFactura::class);
+    }
 }

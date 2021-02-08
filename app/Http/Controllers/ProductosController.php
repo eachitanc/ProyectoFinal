@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Factura;
 use App\Models\DetalleFactura;
+use App\Models\FormaPago;
 
 class ProductosController extends Controller
 {
@@ -123,14 +124,14 @@ class ProductosController extends Controller
 
     public function facturarProd(){
         $idfact = session('id_fact');
-        $datos = DB::table('factura')
-                    ->join('detallefactura', 'id_factura', '=', 'factura_id')
-                    ->join('productos', 'id_producto', '=', 'producto_id')
-                    ->join('usuario', 'usuario_id', '=', 'id_user')
-                    ->select('id_producto','id_factura','nom_user','ape_user','dir_user','tel_user','correo_user','nom_producto','valor_producto','descuento','cant_producto as cantidad')
-                    ->where('id_factura', '=', "$idfact")
-                    ->get();
-        return view('productos.factura.facturar',['datfact' => $datos]);
+        $formapago = FormaPago::all();
+        $datos = DB::table('factura')->join('detallefactura', 'id_factura', '=', 'factura_id')
+                                    ->join('productos', 'id_producto', '=', 'producto_id')
+                                    ->join('usuario', 'usuario_id', '=', 'id_user')
+                                    ->select('id_producto','id_factura','nom_user','ape_user','dir_user','tel_user','correo_user','nom_producto','valor_producto','descuento','cant_producto as cantidad')
+                                    ->where('id_factura', '=', "$idfact")
+                                    ->get();
+        return view('productos.factura.facturar',['datfact' => $datos,'fpago' => $formapago]);
     }
 
     public function agregarAlCarrito($id){

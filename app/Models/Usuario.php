@@ -9,4 +9,8 @@ class Usuario extends Model
 {
     protected $table = 'usuario';
     protected $primaryKey = 'id_user';
+
+    public function roluser(){
+        return $this->belongsTo(Cargo::class);
+    }
 }
