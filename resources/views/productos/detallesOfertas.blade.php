@@ -1,5 +1,6 @@
 @extends('master')
 @section('content')
+<br>
 <div class="container"> 
     <div class="row justify-content-center minh-100" id="detalle">
     <div class="row ">
@@ -55,4 +56,5 @@
     </div>
 </div>
 </div>
+<br>
 @stop

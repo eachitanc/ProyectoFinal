@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- Grid row-->
-        <div align="center">
+        <div align="center"class="py-2">
             Direccion: Cra 6# 11-22 Ipiales-Nariño
             <br>
             Teléfono: 55555555
@@ -15,22 +15,20 @@
         <div class="row">
 
         <!-- Grid column -->
-        <div class="col-md-12 py-2">
-            <div class="mb-5 flex-center">
-
+        <div class="col-md-12 py-2" align="center">
             <!-- Facebook -->
-            <a class="fb-ic">
-                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!-- Twitter -->
-            <a class="tw-ic">
-                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            <!--Instagram-->
-            <a class="ins-ic">
-                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
-            </div>
+                <a class="fb-ic">
+                    <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-lg"> </i>
+                </a>
+                <!-- Twitter -->
+                <a class="tw-ic">
+                    <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-lg"> </i>
+                </a>
+                <!--Instagram-->
+                <a class="ins-ic">
+                    <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-lg"> </i>
+                </a>
+            
         </div>
         <!-- Grid column -->
 
