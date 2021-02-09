@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div title="Agregar">
-                                        <a href="#!" class="btn btn-success btn-sm" >
+                                        <a href="{{route('comprarProd', $ofe->id_producto)}}" class="btn btn-success btn-sm" >
                                             <i class="fas fa-shopping-cart" ></i>
                                         </a>
                                     </div> 

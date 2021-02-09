@@ -79,6 +79,8 @@
             @endforeach
                     </tbody>
                 </table> 
+            <form action="{{ route('compraExitosa')}}" method="POST">   
+                @csrf
                 <div class="container">
                     <div class="row justify-content-end">
                         <div class="col-6">
@@ -86,7 +88,7 @@
                                 <div class="input-group-prepend">
                                   <label class="input-group-text" for="slcFormaPago"><i class="fab fa-cc-visa fa-lg"></i></label>
                                 </div>
-                                <select class="browser-default custom-select" id="slcFormaPago">
+                                <select class="browser-default custom-select" id="slcFormaPago" name="slcFormaPago">
                                     <option selected disabled> <--Elegir forma de pago-->  </option>
                                     @foreach($fpago as $fp)
                                         <option value="{{$fp->id_pago}}">{{$fp->descripcion_pago}}</option>
@@ -96,17 +98,18 @@
                             </div> 
                         <div class="col-3">
                             TOTAL: ${{$total}}
+                            <input type="text" id="txtTotal" name="txtTotal" value="{{$total}}" hidden>
                         </div>   
                     </div> 
-                </div>  
-                       
-         </div>
-       </div>
+                </div>            
+            </div>
+        </div>
 
        <!--Footer-->
-       <div class="modal-footer justify-content-center">
-         <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">Aceptar</a>
-       </div>
+        <div class="modal-footer justify-content-center">
+            <button type="submit" class="btn btn-outline-success waves-effect" data-dismiss="modal">Aceptar</button>
+        </div>
+        </form> 
      </div>
      <!--/.Content-->
    </div>
