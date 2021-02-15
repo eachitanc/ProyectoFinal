@@ -6,7 +6,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\ActualizarController;
 use App\Http\Controllers\ProductosController;
+<<<<<<< HEAD
 use App\Http\Controllers\UsuariosController;
+=======
+use App\Http\Controllers\InformeController;
+>>>>>>> 1eb61ea6fb6ea9954786409733ed4b8a4b8cb3c4
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +44,7 @@ Route::get('/actualizar/usuario', [ActualizarController::class, 'formActualizaUs
 Route::post('/actualizar/usuarios', [ActualizarController::class, 'resFormActualizaUser'])->name('resFormActualizaUsuario');
 Route::get('/productos/comprar/{id}', [ProductosController::class, 'agregarAlCarrito'] )->name('comprarProd');
 Route::get('/productos/compra/factura', [ProductosController::class, 'facturarProd'] )->name('facturar');
+<<<<<<< HEAD
 
 Route::get('/usuarios/listar', [UsuariosController::class, 'listarUser'])->name('listarUser');
 Route::get('/usuarios/registrar', [UsuariosController::class, 'formularioReg'])->name('formularioReg'); 
@@ -47,3 +52,10 @@ Route::post('/usuarios/registrar', [UsuariosController::class, 'registrar'])->na
 Route::get('/usuarios/actualizar/{id}', [UsuariosController::class, 'fromActu'])->name('fromularioAct');
 Route::post('/usuarios/actualizar', [UsuariosController::class, 'actualizar'])->name('actualizar');
 Route::post('/usuarios/eliminar', [UsuariosController::class, 'eliminar'])->name('eliminar');
+=======
+Route::post('/productos/compra/exitosa', [ActualizarController::class, 'compraExito'])->name('compraExitosa');
+Route::get('/informes', [InformeController::class, 'informe'])->name('informes');
+Route::get('descarga', [InformeController::class, 'exportarExcel'])->name('expExcel');
+Route::get('informepdf', [InformeController::class, 'exportarPDF'])->name('expPDF');
+Route::get('/informes/informepdf', [InformeController::class, 'vistaPDF']);
+>>>>>>> 1eb61ea6fb6ea9954786409733ed4b8a4b8cb3c4

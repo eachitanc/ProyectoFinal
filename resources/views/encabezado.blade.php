@@ -46,6 +46,9 @@
                     <a class="dropdown-item" href="#">Productos</a>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('informes')}}">Informes</a>
+            </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item dropdown">

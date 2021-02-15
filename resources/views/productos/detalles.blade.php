@@ -1,6 +1,7 @@
 @extends('master')
 @section('content')
-<div class="container"> 
+<br>
+<div class="container" style="heigh:500px;"> 
     <div class="row justify-content-center minh-100" id="detalle">
     <div class="row ">
         @foreach($detal as $det)
@@ -32,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div title="Agregar">
-                                <a href="#!" class="btn btn-success btn-sm" >
+                                <a href="{{route('comprarProd', $det->id_producto)}}" class="btn btn-success btn-sm" >
                                     <i class="fas fa-shopping-cart" ></i>
                                 </a>
                             </div> 
@@ -79,4 +80,5 @@
     </div>
 </div>
 </div>
+<br>
 @stop

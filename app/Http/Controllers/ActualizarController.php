@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\Usuario;
+use App\Models\Factura;
 use Illuminate\Session\SessionManager;
 
 class ActualizarController extends Controller
@@ -34,5 +35,15 @@ class ActualizarController extends Controller
             $us -> save(); 
             return view('actualizar.resactualizauser');
         }
+    }
+
+    public function compraExito(Request $request){
+        $f = session('id_fact');
+        $fac = Factura::find("$f");
+        $fac -> total = $request->input('txtTotal');
+        $fac -> formapago_id = $request->input('slcFormaPago');
+        $fac -> save(); 
+        session(['factura' => "0"]);
+        return view('productos.compra.compraexitosa');
     }
 }

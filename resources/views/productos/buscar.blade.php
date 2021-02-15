@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row" id="divBuscar">
-        <div class="col-sm-8">
+        <div class="col-sm-8" id="prod">
             <h3>RESULTADO</h3>
         </div>
         <div class="col">
@@ -44,7 +44,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div title="Agregar">
-                                        <a href="#!" class="btn btn-success btn-sm" >
+                                        <a href="{{route('comprarProd', $pro->id_producto)}}" class="btn btn-success btn-sm" >
                                             <i class="fas fa-shopping-cart" ></i>
                                         </a>
                                     </div> 
@@ -63,4 +63,5 @@
         @endforeach
     </div>
 </div>
+<br>
 @stop
