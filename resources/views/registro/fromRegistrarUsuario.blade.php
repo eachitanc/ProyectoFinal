@@ -27,7 +27,7 @@
                             <label for="roles">Tipo de Usuario</label> 
                             <select class="custom-select" id="roles" name="rol">
                                 @foreach($rol as $r)
-                                    <option value="{{$r->id}}">{{$r->descripcion_rol}}</option>
+                                    <option value="{{$r->id_rol}}">{{$r->descripcion_rol}}</option>
                                 @endforeach
                             </select>
                         <!-- Sign up button -->

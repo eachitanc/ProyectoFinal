@@ -64,7 +64,8 @@ class UsuariosController extends Controller
         return redirect()->route('listarUser');
     }
 
-    public function eliminar($id){
+    public function eliminar(Request $request){
+        $id = $request->input('txtId');
         $use = Usuario::findOrFail($id);
         $use->delete();
         return redirect()->route('listarUser');

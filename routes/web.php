@@ -46,4 +46,4 @@ Route::get('/usuarios/registrar', [UsuariosController::class, 'formularioReg'])-
 Route::post('/usuarios/registrar', [UsuariosController::class, 'registrar'])->name('registrar'); 
 Route::get('/usuarios/actualizar/{id}', [UsuariosController::class, 'fromActu'])->name('fromularioAct');
 Route::post('/usuarios/actualizar', [UsuariosController::class, 'actualizar'])->name('actualizar');
-Route::get('/usuarios/eliminar/{id}', [UsuariosController::class, 'eliminar'])->name('eliminar');
+Route::post('/usuarios/eliminar', [UsuariosController::class, 'eliminar'])->name('eliminar');
