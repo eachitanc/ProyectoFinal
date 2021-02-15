@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\ActualizarController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\InformeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,7 @@ Route::post('/actualizar/usuarios', [ActualizarController::class, 'resFormActual
 Route::get('/productos/comprar/{id}', [ProductosController::class, 'agregarAlCarrito'] )->name('comprarProd');
 Route::get('/productos/compra/factura', [ProductosController::class, 'facturarProd'] )->name('facturar');
 Route::post('/productos/compra/exitosa', [ActualizarController::class, 'compraExito'])->name('compraExitosa');
+Route::get('/informes', [InformeController::class, 'informe'])->name('informes');
+Route::get('descarga', [InformeController::class, 'exportarExcel'])->name('expExcel');
+Route::get('informepdf', [InformeController::class, 'exportarPDF'])->name('expPDF');
+Route::get('/informes/informepdf', [InformeController::class, 'vistaPDF']);
