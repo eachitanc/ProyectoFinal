@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\ActualizarController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,10 @@ Route::get('/actualizar/usuario', [ActualizarController::class, 'formActualizaUs
 Route::post('/actualizar/usuarios', [ActualizarController::class, 'resFormActualizaUser'])->name('resFormActualizaUsuario');
 Route::get('/productos/comprar/{id}', [ProductosController::class, 'agregarAlCarrito'] )->name('comprarProd');
 Route::get('/productos/compra/factura', [ProductosController::class, 'facturarProd'] )->name('facturar');
+
+Route::get('/usuarios/listar', [UsuariosController::class, 'listarUser'])->name('listarUser');
+Route::get('/usuarios/registrar', [UsuariosController::class, 'formularioReg'])->name('formularioReg'); 
+Route::post('/usuarios/registrar', [UsuariosController::class, 'registrar'])->name('registrar'); 
+Route::get('/usuarios/actualizar/{id}', [UsuariosController::class, 'fromActu'])->name('fromularioAct');
+Route::post('/usuarios/actualizar', [UsuariosController::class, 'actualizar'])->name('actualizar');
+Route::get('/usuarios/eliminar/{id}', [UsuariosController::class, 'eliminar'])->name('eliminar');

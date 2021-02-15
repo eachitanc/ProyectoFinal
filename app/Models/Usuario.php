@@ -13,4 +13,5 @@ class Usuario extends Model
     public function roluser(){
         return $this->belongsTo(Cargo::class);
     }
+    
 }

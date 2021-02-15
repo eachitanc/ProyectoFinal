@@ -37,7 +37,7 @@
                 ?>>Gestion
                 </a>
                 <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-334">
-                    <a class="dropdown-item" href="#" 
+                    <a class="dropdown-item" href="{{ route('listarUser') }}" 
                     <?php 
                         if(session('rol_user')==2){
                             echo 'hidden';

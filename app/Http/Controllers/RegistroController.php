@@ -43,4 +43,5 @@ class RegistroController extends Controller
         $sessionManager->flash('resp', "$resp");
         return view('registro.resregistro');     
     }
+    
 }
