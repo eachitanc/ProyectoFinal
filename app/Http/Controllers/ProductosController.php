@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Factura;
 use App\Models\DetalleFactura;
+use App\Models\Producto;
 use App\Models\FormaPago;
 
 class ProductosController extends Controller
@@ -132,6 +133,25 @@ class ProductosController extends Controller
                                     ->where('id_factura', '=', "$idfact")
                                     ->get();
         return view('productos.factura.facturar',['datfact' => $datos,'fpago' => $formapago]);
+    }
+    public function formularioReg1()
+    {
+        $pro = Producto::all();
+        return view('productos.registrar');
+    }
+    public function registrarp(Request $request)
+    {
+        $use = new Producto();
+        $use->nom_producto = $request->input('txtProd');
+        $use->valor_producto = $request->input('txtvalProd');
+        $use->descripcion_producto = $request->input('txtdescProd');
+        $use->cant_producto = $request->input('txtcantProd');
+        $use->descuento = $request->input('sldescProd'); 
+        $use->categoria = $request->input('slcatProd');
+        $use->foto_producto = $request->input('imagen');
+        
+        $use->save();
+        return redirect()->route('variosprod');
     }
 
     public function agregarAlCarrito($id){
