@@ -206,5 +206,11 @@ class ProductosController extends Controller
         }
         return view('productos.comprar');
     }
+    public function eliminarp(Request $request, $id){
+        
+        $use = Producto::findOrFail($id);
+        $use->delete();
+        return redirect()->route('variosprod');
+    }
 }
 
