@@ -46,6 +46,7 @@ Route::get('/productos/comprar/{id}', [ProductosController::class, 'agregarAlCar
 Route::get('/productos/compra/factura', [ProductosController::class, 'facturarProd'] )->name('facturar');
 Route::get('/productos/actualizar/{id}', [ProductosController::class, 'fromActup'])->name('fromularioActp');
 Route::post('/productos/actualizar/{id}', [ProductosController::class, 'actualizarpro'] )->name('actualizarp');
+Route::post('/productos/eliminar/{id}', [ProductosController::class, 'eliminarp'])->name('eliminarp');
 
 Route::get('/usuarios/listar', [UsuariosController::class, 'listarUser'])->name('listarUser');
 Route::get('/usuarios/registrar', [UsuariosController::class, 'formularioReg'])->name('formularioReg'); 

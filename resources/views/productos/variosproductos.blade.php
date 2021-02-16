@@ -37,7 +37,7 @@
                     <td>
                         <div class="row">
                             <div class="col col-3">
-                                <form action="{{ route('eliminar')}}" method="POST">
+                                <form action="{{ route('eliminarp',$producto->id_producto)}}" method="POST">
                                     @csrf
                                     <input type="text" value="{{$producto->id_producto}}" name="txtId" hidden >
                                     <button type="submit" class="btn btn-danger btn-sm" > Eliminar</buton>
