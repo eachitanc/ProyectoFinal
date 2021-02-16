@@ -44,7 +44,8 @@ Route::get('/actualizar/usuario', [ActualizarController::class, 'formActualizaUs
 Route::post('/actualizar/usuarios', [ActualizarController::class, 'resFormActualizaUser'])->name('resFormActualizaUsuario');
 Route::get('/productos/comprar/{id}', [ProductosController::class, 'agregarAlCarrito'] )->name('comprarProd');
 Route::get('/productos/compra/factura', [ProductosController::class, 'facturarProd'] )->name('facturar');
-
+Route::get('/productos/actualizar/{id}', [ProductosController::class, 'fromActup'])->name('fromularioActp');
+Route::post('/productos/actualizar/{id}', [ProductosController::class, 'actualizarpro'] )->name('actualizarp');
 
 Route::get('/usuarios/listar', [UsuariosController::class, 'listarUser'])->name('listarUser');
 Route::get('/usuarios/registrar', [UsuariosController::class, 'formularioReg'])->name('formularioReg'); 
