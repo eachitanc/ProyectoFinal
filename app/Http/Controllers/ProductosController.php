@@ -25,9 +25,8 @@ class ProductosController extends Controller
     public function varios(){
         $varProd = DB::table('productos as pro')
                     ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
-                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto','pro.foto_producto', 'categoria.descripcion_cat')
-                    ->whereBetween('valor_producto', [25000, 50000])
-                    ->orderBy('valor_producto', 'desc')
+                    ->select('pro.id_producto','pro.nom_producto', 'pro.descripcion_producto','pro.valor_producto', 'pro.cant_producto','categoria.descripcion_cat')
+                    ->orderBy('id_producto', 'asc')
                     ->get();
         return view('productos.variosproductos',['varProd' => $varProd]);
     }
@@ -139,6 +138,7 @@ class ProductosController extends Controller
         $pro = Producto::all();
         return view('productos.registrar');
     }
+    
     public function registrarp(Request $request)
     {
         $use = new Producto();
@@ -153,7 +153,31 @@ class ProductosController extends Controller
         $use->save();
         return redirect()->route('variosprod');
     }
+    public function fromActup($id){
+        $prod =  DB::table('productos as pro')
+                 ->join('categoria', 'pro.categoria', '=', 'categoria.id_cat')
+                 ->where('pro.id_producto','=',"$id")
+                 ->get();
+         $cat = DB::table('categoria')
+                 ->get();
+         return view('productos.fromActualizarprod', ['prod'=> $prod,'cat'=>$cat]);
+     }
+     public function actualizarpro(Request $request, $id){
+        
 
+        $use = Producto::findOrFail($id);
+        $use->nom_producto = $request->input('txtProd');
+        $use->valor_producto = $request->input('txtvalProd');
+        $use->descripcion_producto = $request->input('txtdescProd');
+        $use->cant_producto = $request->input('txtcantProd');
+        $use->descuento = $request->input('sldescProd'); 
+        $use->categoria = $request->input('slcatProd');
+        $use->foto_producto = $request->input('imagen');
+        $use->save();
+        return redirect()->route('variosprod');
+    }
+
+     
     public function agregarAlCarrito($id){
         if(session('factura')== 0){
             $hoy = date('Y-m-d');

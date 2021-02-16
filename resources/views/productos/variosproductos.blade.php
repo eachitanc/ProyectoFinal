@@ -1,32 +1,57 @@
-@extends('masterout')
-@section('contenido')
-    <div class="container"> 
-        <div class="row" id="divBuscar">
-            <div class="col" id="prod">
-                <h3>Variedad de productos</h3>
-                <h4>Para más productos, información y buscar lo que necesitas debes <a href="{{ route('formLogin')}}" style="color:blue">Iniciar Sesión</a> </h3>
-            </div>
-        </div>   
-        <div class="row">
-            @foreach($varProd as $v)
-                <div class="col-md-3">
-                    <br>
-                    <div class="card" style="width: 15rem; height: 25rem;">
-                        <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                            <img src='{{url("/img/$v->foto_producto")}}' class="img-fluid" id="img"/>
-                            <a href="#!">
-                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">{{$v->nom_producto}}</h5>
-                            <p>$ {{$v->valor_producto}}</p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-<br>
+@extends('master')
+@section('content')
+    <h1 style="text-align: center;"> Listado Productos </h1>
+    <div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre producto</th>
+                <th scope="col">Descripcion </th>
+                <th scope="col">Valor </th>
+                <th scope="col">Cantidad  </th>
+                <th scope="col">categoria </th>
+                <th scope="col">Opciones </th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($varProd as $producto)
+        
+                <tr>
+                    <td> {{ $producto->id_producto }} </td>
+                    <td> {{ $producto->nom_producto}} </td>
+                    <td> {{ $producto->descripcion_producto }}</td>
+                    <td> {{ $producto->valor_producto}}</td>
+                    <td> {{ $producto->cant_producto}}</td>
+                    <td> {{ $producto->descripcion_cat}}</td>
 
+                    <td>
+                        <div class="row">
+                            <div class="col col-3">
+                                <a href="{{route('fromularioActp',$producto->id_producto)}}" class="btn  btn-primary btn-sm" > Actualizar</a>
+                            </div>
+                            
+                        </div>
+                
+                    </td>
+                    <td>
+                        <div class="row">
+                            <div class="col col-3">
+                                <form action="{{ route('eliminar')}}" method="POST">
+                                    @csrf
+                                    <input type="text" value="{{$producto->id_producto}}" name="txtId" hidden >
+                                    <button type="submit" class="btn btn-danger btn-sm" > Eliminar</buton>
+                                </form>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            
+        @endforeach
+            
+        </tbody>
+    </table>
+
+    <a href="{{ route('formularioReg1')}}" class="btn btn-success btn-sm " style="align-content: center;" > Registrar</a>
+</div>
 @stop
