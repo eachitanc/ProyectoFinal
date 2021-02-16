@@ -43,7 +43,7 @@
                             echo 'hidden';
                         }
                     ?>>Usuarios</a>
-                    <a class="dropdown-item" href="#">Productos</a>
+                    <a class="dropdown-item" href="{{ route('formularioReg1')}}">Productos</a>
                 </div>
             </li>
             <li class="nav-item">

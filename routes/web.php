@@ -52,7 +52,8 @@ Route::post('/usuarios/registrar', [UsuariosController::class, 'registrar'])->na
 Route::get('/usuarios/actualizar/{id}', [UsuariosController::class, 'fromActu'])->name('fromularioAct');
 Route::post('/usuarios/actualizar', [UsuariosController::class, 'actualizar'])->name('actualizar');
 Route::post('/usuarios/eliminar', [UsuariosController::class, 'eliminar'])->name('eliminar');
-
+Route::get('/productos/registrar', [ProductosController::class, 'formularioReg1'])->name('formularioReg1');
+Route::post('/productos/registrar', [ProductosController::class, 'registrarp'])->name('registrarp');
 Route::post('/productos/compra/exitosa', [ActualizarController::class, 'compraExito'])->name('compraExitosa');
 Route::get('/informes', [InformeController::class, 'informe'])->name('informes');
 Route::get('descarga', [InformeController::class, 'exportarExcel'])->name('expExcel');
